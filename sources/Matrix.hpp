@@ -1,6 +1,4 @@
-#ifndef Matrix_H
-#define Matrix_H
-
+#pragma once
 #include <vector>
 #include <iostream>
 
@@ -34,6 +32,8 @@ public:
     bool operator == (Matrix const &other);
     friend bool operator == (Matrix const &lhs, Matrix const &rhs); // not correct but needed for student test 2
     bool operator != (Matrix const &other);
+    friend bool operator != (Matrix const &lhs, Matrix const &rhs);
+    //consider adding a friend !=
 
     Matrix& operator ++ (); // ++Prefix
     Matrix operator ++ (int); // Postfix++
@@ -54,4 +54,3 @@ public:
 
 };
 }
-#endif

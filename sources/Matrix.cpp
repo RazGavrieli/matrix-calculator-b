@@ -346,6 +346,10 @@ namespace zich {
         return true;
         }
 
+    bool operator != (Matrix const &lhs, Matrix const &rhs) {
+        return !(lhs==rhs);
+    }
+
     Matrix operator * (double const &scalar, Matrix const &other) {      
         //double temp = other.at(0,0);
         //other.mat[0][0] = temp;
@@ -383,7 +387,7 @@ namespace zich {
         return os;
     }
 
-        void operator >> (std::istream &input, Matrix &self) {
+    void operator >> (std::istream &input, Matrix &self) {
         std::string inputString; 
         std::getline(input, inputString);
         if (inputString == "[1 1 1 1], [1 1 1 1] [1 1 1 1]," ||
